@@ -1,0 +1,121 @@
+html {
+  background-color: black;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.mainBody{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainBody .header h1{
+  font-size: 60px;
+  color: white;
+  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  cursor: default;
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.keys {
+  cursor: pointer;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: repeat(3, 200px);
+  animation: scale-in-ver-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation-delay: 500ms;
+}
+
+@keyframes scale-in-ver-top {
+  0% {
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+
+.key {
+  border-radius: .5rem;
+  font-size: 20px;
+  color: black;
+  margin: 0.5rem;
+  padding: 1rem 1rem;
+  transition: all .1s ease;
+  background: white;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 0.5rem #ffc600;
+}
+
+.changeKit{
+  padding: 50px;
+  font-size: 18px;
+  color: rgba(0,0,0,0.7);
+  animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation-delay: 800ms;
+}
+
+
+
+
+input{
+  margin: 0 0.5rem;
+}
+
+label{
+  color: white;
+  margin: 0 0.1rem;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation-delay: 1000ms;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+footer p{
+  margin: 0;
+  color: white;
+  text-align: center;
+}
